@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsp stat="ok">
+<list>
+<widget id="Jellyfin">
+<title>Jellyfin</title>
+<compression type="zip" size="1582968"/>
+<description/>
+<download>http://192.168.1.26/Widgets/Jellyfin_2.2.6_Europe_20230928.zip</download>
+</widget>
+</list>
+</rsp>
