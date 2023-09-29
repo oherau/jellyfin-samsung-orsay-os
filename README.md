@@ -29,6 +29,14 @@ For windows:
 - Make sure files are available, open a web browser and type: http://localhost/widdgetlist.xml
 - Once everything is in place open a powershell, type ipconfig
 - Write down the local IP of your machine (192.168.xxx.xxx) as you will need it during the install procedure as the "Server's IP address"
+
+------------------
+Post-Install notes
+------------------
+
+The switch to developer mode is a mandatory step to install the software from a custom apps provider.
+Some features are disabled in this mode.
+Once the install is successful, you should logout from the developer account, and login with your previous regular account.
   
 
 ---------------------
