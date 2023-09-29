@@ -24,7 +24,8 @@ Before install, a local "app store" must be set up on a local machine
 For windows:
 - Install "Internet Information Services" (IIS) available in Windows additionnal softwares
 - Download the jellyfin.xxx.zip and widdgetlist.xml
-- Copy the files at the roor of the folder "c:\inetpub\wwwroot"
+- Copy widdgetlist.xml at the root of the folder: "c:\inetpub\wwwroot"
+- Copy jellyfin.xxx.zip in a new subfolder named Widget: "c:\inetpub\wwwroot\Widgets"
 - Make sure files are available, open a web browser and type: http://localhost/widdgetlist.xml
 - Once everything is in place open a powershell, type ipconfig
 - Write down the local IP of your machine (192.168.xxx.xxx) as you will need it during the install procedure as the "Server's IP address"
