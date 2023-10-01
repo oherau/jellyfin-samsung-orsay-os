@@ -1,6 +1,10 @@
-# jellyfin-samsung-orsay-os
-This is a version of Jellyfin for Samsung Smart TV using Orsay OS (produced before 2014)
+# Jellyfin for Samsung Smart TV with Orsay OS
+This is a version of Jellyfin for Samsung Smart TV produced before 2014.
+The models concerned are using Orsay OS, a legacy that is no more supported.
+Apps and OS updates are no more available but the system is still customizable using the developer account.
 
+If your TV model is newer, it is probably using Tizen OS. 
+In this case you should use this software: https://github.com/jellyfin/jellyfin-tizen
 
 # Supported Devices
 Samsung TV's, Blu-ray Disk Players and Home Theatre Systems with older "Orsay" SmartHub operating system.
