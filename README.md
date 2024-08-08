@@ -25,14 +25,28 @@ Pre-Install steps
 
 Before install, a local "app store" must be set up on a local machine
 
-For windows:
+Windows:
 - Install "Internet Information Services" (IIS) available in Windows additionnal softwares
-- Download the jellyfin.xxx.zip and widdgetlist.xml
-- Copy widdgetlist.xml at the root of the folder: "c:\inetpub\wwwroot"
-- Copy jellyfin.xxx.zip in a new subfolder named Widget: "c:\inetpub\wwwroot\Widgets"
+- Open a powershell, type ipconfig
+- Write down the local IP of your machine (xxx.xxx.xxx.xxx) as you will need it during the install procedure as the ">Local app store's IP address"
+- Download the jellyfin.xxx.zip and widgetlist.xml
+- Copy widgetlist.xml at the root of the folder: "c:\inetpub\wwwroot"
+- Copy jellyfin.xxx.zip in a new subfolder named Widgets: "c:\inetpub\wwwroot\Widgets"
+- Edit the widgetlist.xml file and change the IP address to your Local IP address <download>http://192.168.1.26/Widgets/Jellyfin_2.2.6_Europe_20230928.zip</download> to <download>http://LocalIPaddress/Widgets/Jellyfin_2.2.6_Europe_20230928.zip</download>
 - Make sure files are available, open a web browser and type: http://localhost/widgetlist.xml
-- Once everything is in place open a powershell, type ipconfig
-- Write down the local IP of your machine (192.168.xxx.xxx) as you will need it during the install procedure as the "Server's IP address"
+
+MacOS or Linux:
+- Get Local IP address (e.g. using ifconfig Terminal command)
+- Download the jellyfin.xxx.zip and widgetlist.xml 
+- Create a directory under your Home directory called jellyfin (e.g. /User/YourName/jellyfin)
+- Copy widgetlist.xml at the root of the directory:
+- Create another directory under jellyfin called Widgets (e.g. /User/YourName/jellyfin/Widgets)
+- Copy the jellyfin.xxx.zip file to the Widgets folder (e.g. /User/YourName/jellyfin/Widgets/Jellyfin_2.2.6_Europe_20230928.zip)
+- Edit the widgetlist.xml file and change the IP address to your Local IP address <download>http://192.168.1.26/Widgets/Jellyfin_2.2.6_Europe_20230928.zip</download> to <download>http://LocalIPaddress/Widgets/Jellyfin_2.2.6_Europe_20230928.zip</download>
+- Start the Terminal App and goto the jellyfin directory (e.g. cd /User/YourName/jellyfin)
+- Start a temporary web server using PYTHON using the following command:python -m SimpleHTTPServer 80
+- Go to your TV and install the Jellyfin App using your MacOS's IP address (detailed instructions below)
+- When complete, stop the temporary web server on your Mac by entering Control-C on the terminal.
 
 ------------------
 Post-Install notes
@@ -50,7 +64,7 @@ Once the install is successful, you should logout from the developer account, an
 - On the Samsung device load up the Smart Hub and press red to login
 - Login with the details "develop", password "000000"
 - Once logged in, press the blue button and there should be a developer menu.
-- In there select "Setting Server IP" and it will ask for an IP address. Enter either 110.150.77.83 or 80.32.109.216
+- In there select "Setting Server IP" and it will ask for an IP address. Enter  the Local app store IP address
 - Once that's done select "User Application Synchronization" and hopefully it will connect and download the app to the TV.
 
 ---------------------
@@ -77,11 +91,11 @@ To install/update the app
 - Check the box to "Agree" to the "Terms of Service Agreement"
 - Select "OK"
 - Select "Setting Server IP"
-- Enter the IP Address 173.230.139.54
+- Enter the Local app store IP Address
 - Select "User Application Synchronisation" - this will download the app
 - Once the app has downloaded it will appear on the SmartHub screen
 - Select the App
-- You will then have to enter your Server's IP address and port number.
+- You will then have to enter your Jellyfin's IP address and port number.
 
 ---------------------
 2013 F-Series Install
@@ -97,11 +111,11 @@ To install/update the app
 - Select "More Apps" (at the bottom of the screen)
 - Select "Options" at the top right
 - Select "IP Setting"
-- Enter the IP address 173.230.139.54
+- Enter the Local app store IP address
 - Exit and then select "Start App Sync" from the Options menu - this will download the app
 - Once the app has downloaded it will appear on the "More Apps" screen
 - Select the App
-- You will then have to enter your Server's IP address and port number (these are visible on the server's settings page).
+- You will then have to enter your Jellyfin's IP address and port number (these are visible on the server's settings page).
 
 ------------------------------------------
 2014 H-Series Plus Selected J and K Series
@@ -112,7 +126,7 @@ Supported models: All H and HU (4K) series models plus J4300, J5200, J5300, J620
 - You can logon as develop (user "develop", password "000000" or blank for some models) by clicking the menu button and than select Smart Hub and in there Samsung Account menu on your remote.
 - After you logged on as develop you can press the smart hub button on your remote.
 - Go to my app's list and on one of the installed apps hold the enter button down for a few seconds.
-- Another window will pop up giving you the option to add the IP address. Enter 173.230.139.54.
+- Another window will pop up giving you the option to add the IP address. Enter the Local app store IP address.
 - Afterwards hold the enter button down to go in the options again and choose "Start User app sync".
 - There will pop up a new window which says "user apps sync is requested"
 - After a few seconds the app will be installed on your TV.
